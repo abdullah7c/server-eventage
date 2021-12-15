@@ -48,9 +48,11 @@ app.get("/users", (req, res) => {
 
 
 // Listen on port 5000
-db.sequelize.sync().then((req)=>{
-  app.listen(port, ()=>{
-      console.log(`Server Running on port ${port}`)
-  })
+// db.sequelize.sync().then((req)=>{
+//   app.listen(port, ()=>{
+//       console.log(`Server Running on port ${port}`)
+//   })
+// })
+app.listen(port, ()=>{
+  console.log(`Server Running on port ${port}`)
 })
-
