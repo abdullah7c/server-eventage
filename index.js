@@ -24,27 +24,27 @@ app.get("/users", (req, res) => {
 });
 
 
-app.post("/addUser", async(req, res) => {
+// app.post("/addUser", async(req, res) => {
 
-  try {
-    await Users.create({username:"name", password:"123", type:"Admin"})
-    res.send('User Created');
-    //res.send("Requet Recieved")
-  } catch (error) {
-    res.send(error)
-  }
-});
+//   try {
+//     await Users.create({username:"name", password:"123", type:"Admin"})
+//     res.send('User Created');
+//     //res.send("Requet Recieved")
+//   } catch (error) {
+//     res.send(error)
+//   }
+// });
 
-app.get("/getUser", async(req, res) => {
+// app.get("/getUser", async(req, res) => {
 
-  try {
-    const result = await Users.findAll({where:{username:'name'}})
-    res.send(result);
+//   try {
+//     const result = await Users.findAll({where:{username:'name'}})
+//     res.send(result);
 
-  } catch (error) {
-    res.send(error)
-  }
-});
+//   } catch (error) {
+//     res.send(error)
+//   }
+// });
 
 
 // Listen on port 5000
